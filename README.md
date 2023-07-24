@@ -84,7 +84,7 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-[![Product Name Screen Shot][product-screenshot]](https://example.com)
+[![My channel screen shot][product-screenshot]](https://drive.google.com/file/d/1xFudK7N5jPQ9gRXhcqWGhot-7Whb2SYE/view?usp=drive_link)
 
 Every day I make a list of tasks in the telegram channel, and at the end of the day I mark with emoji whether I have completed the tasks or not and evaluate my productivity, the interest of the day and stress level. on a 10-point scale.
 
