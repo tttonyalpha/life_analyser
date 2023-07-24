@@ -91,10 +91,10 @@ Every day I make a list of tasks in the telegram channel, and at the end of the 
 
 I decided to create a chatbot, a chatbot that parses my telegram channel, my Google calendar, data from my fitness bracelet and, based on the information from there, makes various predictions, gives advice and checks the correctness of filling out reports
 
-# Feature 1: N-day summary and autoreports  
+## Feature 1: N-day summary and autoreports  
 Model summarize my activities, emotions and etc during week and make report with advices 
 
-Main idea:
+*Main idea:*
 
 1. Detect intents (activity types)
 2. NER (detect activity and get it’s normal form)
@@ -103,16 +103,16 @@ Main idea:
 5. Anomalies detection and alarms 
 6. If the report is filled out incorrectly, make reminders
 
-# Feature 2: Recsys for activity
+## Feature 2: Recsys for activity
 
-Based on information from summary:
+*Based on information from summary:*
     
 1. Recommend top 3 activity for next day (from my activity pool)
 2. Recommend Activity types on which i should focus next n-days 
 3. Rest time control 
 4. Tumblers for recommendations types: (work/rest/creativity)
 
-# Feature 3: Activity recognition on images 
+## Feature 3: Activity recognition on images 
 
 If I haven't filled out the report, but attached photos, bot automatically analyzes the images and recognizes activities
 
