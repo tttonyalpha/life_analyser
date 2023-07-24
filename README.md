@@ -37,7 +37,7 @@
 <h3 align="center">Life analyser</h3>
 
   <p align="center">
-    This is a telegram bot that parses which parses my telegram channel with daily reports. Based on this data, it generates a summary of past reports, predicts various indicators of well-being for the next day and recommends activity for 
+    This is a telegram bot which parses my telegram channel with daily reports. Based on this data, it generates a summary of past reports, predicts various indicators of well-being for the next day and recommends activity for 
     <br />
     <a href="https://github.com/tttonyalpha/life_analyser"><strong>Explore the docs »</strong></a>
     <br />
