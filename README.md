@@ -86,7 +86,36 @@
 
 [![Product Name Screen Shot][product-screenshot]](https://example.com)
 
-gdddddddddddddddddddddddddd
+Every day I make a list of tasks in the telegram channel, and at the end of the day I mark with emoji whether I have completed the tasks or not and evaluate my productivity, the interest of the day and stress level. on a 10-point scale.
+
+
+I decided to create a chatbot, a chatbot that parses my telegram channel, my Google calendar, data from my fitness bracelet and, based on the information from there, makes various predictions, gives advice and checks the correctness of filling out reports
+
+# Feature 1: N-day summary and autoreports  
+Model summarize my activities, emotions and etc during week and make report with advices 
+
+Main idea:
+
+1. Detect intents (activity types)
+2. NER (detect activity and get it’s normal form)
+3. For every activity detect emotion (neutral, happy, angry, etc ..)
+4. Get numeric metrics 
+5. Anomalies detection and alarms 
+6. If the report is filled out incorrectly, make reminders
+
+# Feature 2: Recsys for activity
+
+Based on information from summary:
+    
+1. Recommend top 3 activity for next day (from my activity pool)
+2. Recommend Activity types on which i should focus next n-days 
+3. Rest time control 
+4. Tumblers for recommendations types: (work/rest/creativity)
+
+# Feature 3: Activity recognition on images 
+
+If I haven't filled out the report, but attached photos, bot automatically analyzes the images and recognizes activities
+
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -107,41 +136,7 @@ gdddddddddddddddddddddddddd
 
 
 
-<!-- GETTING STARTED -->
-## Getting Started
 
-This is an example of how you may give instructions on setting up your project locally.
-To get a local copy up and running follow these simple example steps.
-
-### Prerequisites
-
-This is an example of how to list things you need to use the software and how to install them.
-* npm
-  ```sh
-  npm install npm@latest -g
-  ```
-
-### Installation
-
-1. Get a free API Key at [https://example.com](https://example.com)
-2. Clone the repo
-   ```sh
-   git clone https://github.com/github_username/repo_name.git
-   ```
-3. Install NPM packages
-   ```sh
-   npm install
-   ```
-4. Enter your API in `config.js`
-   ```js
-   const API_KEY = 'ENTER YOUR API';
-   ```
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-
-
-<!-- USAGE EXAMPLES -->
 ## Usage
 
 Use this space to show useful examples of how a project can be used. Additional screenshots, code examples and demos work well in this space. You may also link to more resources.
@@ -165,25 +160,6 @@ See the [open issues](https://github.com/github_username/repo_name/issues) for a
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 
-
-<!-- CONTRIBUTING -->
-## Contributing
-
-Contributions are what make the open source community such an amazing place to learn, inspire, and create. Any contributions you make are **greatly appreciated**.
-
-If you have a suggestion that would make this better, please fork the repo and create a pull request. You can also simply open an issue with the tag "enhancement".
-Don't forget to give the project a star! Thanks again!
-
-1. Fork the Project
-2. Create your Feature Branch (`git checkout -b feature/AmazingFeature`)
-3. Commit your Changes (`git commit -m 'Add some AmazingFeature'`)
-4. Push to the Branch (`git push origin feature/AmazingFeature`)
-5. Open a Pull Request
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-
-
 <!-- LICENSE -->
 ## License
 
@@ -192,13 +168,12 @@ Distributed under the MIT License. See `LICENSE.txt` for more information.
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 
-
 <!-- CONTACT -->
 ## Contact
 
-Your Name - [@twitter_handle](https://twitter.com/twitter_handle) - email@email_client.com
+My contacts: [@twitter_handle](https://t.me/my_name_is_nikita_hey) - tttonyalpha@gmail.com
 
-Project Link: [https://github.com/github_username/repo_name](https://github.com/github_username/repo_name)
+Project Link: [https://github.com/github_username/repo_name](https://github.com/tttonyalpha/life_analyser)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
