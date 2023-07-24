@@ -3,3 +3,5 @@
 /tg_bot/*
 
 !/tg_bot/prototype.ipynb
+
+/web_application/django-gradient-able
