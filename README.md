@@ -94,7 +94,7 @@ I decided to create a chatbot, a chatbot that parses my telegram channel, my Goo
 ## Feature 1: N-day summary and autoreports  
 Model summarize my activities, emotions and etc during week and make report with advices 
 
-*Main idea:*
+#### Main idea:
 
 1. Detect intents (activity types)
 2. NER (detect activity and get it’s normal form)
@@ -105,7 +105,7 @@ Model summarize my activities, emotions and etc during week and make report with
 
 ## Feature 2: Recsys for activity
 
-*Based on information from summary:*
+#### Based on information from summary:
     
 1. Recommend top 3 activity for next day (from my activity pool)
 2. Recommend Activity types on which i should focus next n-days 
