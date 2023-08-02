@@ -165,6 +165,20 @@ Distributed under the MIT License. See `LICENSE.txt` for more information.
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 
+test citations[[1]](#1).
+
+## References
+<a id="1">[1]</a> 
+Tianyi Zhang, Felix Wu, Arzoo Katiyar, Kilian Q. Weinberger, Yoav Artzi.
+Revisiting Few-sample BERT Fine-tuning.
+arXiv:2006.05987.
+
+<a id="2">[1]</a> 
+Tianyi Zhang, Felix Wu, Arzoo Katiyar, Kilian Q. Weinberger, Yoav Artzi.
+Revisiting Few-sample BERT Fine-tuning.
+arXiv:2006.05987.
+
+
 
 <!-- MARKDOWN LINKS & IMAGES -->
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
