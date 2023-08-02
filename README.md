@@ -169,8 +169,8 @@ test citations[[1]](#1).
 
 ## References
 <a id="1">[1]</a> 
-Tianyi Zhang, Felix Wu, Arzoo Katiyar, Kilian Q. Weinberger, Yoav Artzi.
-Revisiting Few-sample BERT Fine-tuning.
+Revisiting Few-sample BERT Fine-tuning.<br>
+Tianyi Zhang, Felix Wu, Arzoo Katiyar, Kilian Q. Weinberger, Yoav Artzi.<br>
 arXiv:2006.05987.
 
 <a id="2">[1]</a> 
