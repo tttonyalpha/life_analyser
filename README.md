@@ -165,18 +165,18 @@ Distributed under the MIT License. See `LICENSE.txt` for more information.
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 
-test citations[[1]](#1).
+test citations [[1]](#1).
 
 ## References
 <a id="1">[1]</a> 
 Revisiting Few-sample BERT Fine-tuning.
 Tianyi Zhang, Felix Wu, Arzoo Katiyar, Kilian Q. Weinberger, Yoav Artzi.<br>
-[arXiv:2006.05987](https://arxiv.org/abs/2006.05987).
+[arXiv:2006.05987](https://arxiv.org/abs/2006.05987)
 
-<a id="2">[1]</a> 
-Tianyi Zhang, Felix Wu, Arzoo Katiyar, Kilian Q. Weinberger, Yoav Artzi.
-Revisiting Few-sample BERT Fine-tuning.
-arXiv:2006.05987.
+<a id="2">[2]</a> 
+Investigating Transferability in Pretrained Language Models.
+Alex Tamkin, Trisha Singh, Davide Giovanardi, Noah Goodman.
+[arXiv:2004.14975](https://arxiv.org/abs/2004.14975)
 
 
 
