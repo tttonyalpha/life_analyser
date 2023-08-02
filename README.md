@@ -175,7 +175,7 @@ Tianyi Zhang, Felix Wu, Arzoo Katiyar, Kilian Q. Weinberger, Yoav Artzi.<br>
 
 <a id="2">[2]</a> 
 Investigating Transferability in Pretrained Language Models.
-Alex Tamkin, Trisha Singh, Davide Giovanardi, Noah Goodman.
+Alex Tamkin, Trisha Singh, Davide Giovanardi, Noah Goodman.<br>
 [arXiv:2004.14975](https://arxiv.org/abs/2004.14975)
 
 
