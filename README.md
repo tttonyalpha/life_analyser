@@ -53,7 +53,7 @@
 
 
 <!-- TABLE OF CONTENTS -->
-<details>
+<!-- <details>
   <summary>Table of Contents</summary>
   <ol>
     <li>
@@ -77,13 +77,13 @@
     <li><a href="#acknowledgments">Acknowledgments</a></li>
   </ol>
 </details>
-
+ -->
 
 
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-[![My channel screen shot][product-screenshot]](https://drive.google.com/file/d/1xFudK7N5jPQ9gRXhcqWGhot-7Whb2SYE/view?usp=drive_link)
+[![My channel screen shot][product-screenshot]](https://drive.google.com/file/d/12k2PHKTiuc_fPejNALLAS7gnQKYj06X2/view?usp=sharing)
 
 Every day I make a list of tasks in the telegram channel, and at the end of the day I mark with emoji whether I have completed the tasks or not and evaluate my productivity, the interest of the day and stress level. on a 10-point scale.
 

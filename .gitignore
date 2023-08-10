@@ -8,6 +8,7 @@
 !/assistant/db.py
 !/assistant/data_markup.py
 !/assistant/tg_to_sql.py
+!/assistant/models
 
 
 /web_application/django-gradient-able
