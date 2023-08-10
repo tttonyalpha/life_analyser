@@ -122,7 +122,8 @@ Apear soon
 
 #### Architecture: 
 
-here will be umage soon
+![lstm recsys][lstm_recsys]
+
 
 #### My model results: 
 
@@ -130,7 +131,7 @@ here will be umage soon
 
 
 ## Feature 3: Activity recognition on images 
-
+  
 If I haven't filled out the report, but attached photos, bot automatically analyzes the images and recognizes activities
 
 
@@ -220,6 +221,7 @@ Jeremy Howard, Sebastian Ruder.<br>
 [linkedin-url]: https://linkedin.com/in/linkedin_username
 [product-screenshot]: images/channel_screen.png
 [lstm_predictions]: images/lstm_predictions.png
+[lstm_recsys]: images/lstm_recsys.png
 [Next.js]: https://img.shields.io/badge/next.js-000000?style=for-the-badge&logo=nextdotjs&logoColor=white
 [Next-url]: https://nextjs.org/
 [React.js]: https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB
