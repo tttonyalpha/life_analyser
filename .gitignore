@@ -1,13 +1,13 @@
 /web_application/my-day-analyze-f7d79d96a0ff.json
 
-/tg_bot/*
+/assistant/*
 
 #!/tg_bot/prototype.ipynb
-!/tg_bot/data_fetcher.py
-!/tg_bot/data_parser.py
-!/tg_bot/db.py
-!/tg_bot/data_markup.py
-!/tg_bot/tg_to_sql.py
+!/assistant/data_fetcher.py
+!/assistant/data_parser.py
+!/assistant/db.py
+!/assistant/data_markup.py
+!/assistant/tg_to_sql.py
 
 
 /web_application/django-gradient-able
