@@ -178,6 +178,12 @@ Investigating Transferability in Pretrained Language Models.
 Alex Tamkin, Trisha Singh, Davide Giovanardi, Noah Goodman.<br>
 [arXiv:2004.14975](https://arxiv.org/abs/2004.14975)
 
+<a id="3">[3]</a> 
+Universal Language Model Fine-tuning for Text Classification.
+Jeremy Howard, Sebastian Ruder.<br>
+[arXiv:1801.06146](https://arxiv.org/abs/1801.06146)
+
+
 
 
 <!-- MARKDOWN LINKS & IMAGES -->
