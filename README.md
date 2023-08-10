@@ -83,7 +83,7 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-[![My channel screen shot][product-screenshot]]
+![My channel screen shot][product-screenshot]
 <!-- (https://drive.google.com/file/d/12k2PHKTiuc_fPejNALLAS7gnQKYj06X2/view?usp=sharing) -->
 
 Every day I make a list of tasks in the telegram channel, and at the end of the day I mark with emoji whether I have completed the tasks or not and evaluate my productivity, the interest of the day and stress level. on a 10-point scale.
@@ -92,16 +92,24 @@ Every day I make a list of tasks in the telegram channel, and at the end of the 
 I decided to create a chatbot, a chatbot that parses my telegram channel, my Google calendar, data from my fitness bracelet and, based on the information from there, makes various predictions, gives advice and checks the correctness of filling out reports
 
 ## Feature 1: N-day summary and autoreports  
-Model summarize my activities, emotions and etc during week and make report with advices 
+Model summarize my activities, emotions and etc during week and make report 
 
-#### Main idea:
+#### Activiti type recognition
 
-1. Detect intents (activity types)
-2. NER (detect activity and get it’s normal form)
-3. For every activity detect emotion (neutral, happy, angry, etc ..)
-4. Get numeric metrics 
-5. Anomalies detection and alarms 
-6. If the report is filled out incorrectly, make reminders
+For this task i have tried different models: fasttext+gb, fasttext+BiLSTM, roberta-base. Best score gives roberta, finetuned on small dataset with layer freezing and other specific hacks mentioned in articles: [[1]](#1), [[2]](#2), [[3]](#3)
+
+<!-- 2. NER (detect activity and get it’s normal form) -->
+### For every activity detect emotion (neutral, happy, angry, etc ..)
+
+For this task i used model from huggingface - [bertweet-sentiment-analysis](https://huggingface.co/finiteautomata/bertweet-base-sentiment-analysis)
+
+### Anomalies detection and alarms 
+
+Apear soon
+
+### Numeric metrics prediction 
+
+Apear soon
 
 ## Feature 2: Recsys for activity
 
@@ -111,6 +119,11 @@ Model summarize my activities, emotions and etc during week and make report with
 2. Recommend Activity types on which i should focus next n-days 
 3. Rest time control 
 4. Tumblers for recommendations types: (work/rest/creativity)
+
+For this task i used the following architecture: 
+
+here will be umage soon
+
 
 ## Feature 3: Activity recognition on images 
 
@@ -166,7 +179,7 @@ Distributed under the MIT License. See `LICENSE.txt` for more information.
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 
-test citations [[1]](#1).
+
 
 ## References
 <a id="1">[1]</a> 
