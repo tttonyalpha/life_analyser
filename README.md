@@ -124,6 +124,10 @@ Apear soon
 
 here will be umage soon
 
+#### My model results: 
+
+![lstm predictions][lstm_predictions.png]
+
 
 ## Feature 3: Activity recognition on images 
 
