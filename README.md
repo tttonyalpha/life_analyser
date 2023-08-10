@@ -99,15 +99,15 @@ Model summarize my activities, emotions and etc during week and make report
 For this task i have tried different models: fasttext+gb, fasttext+BiLSTM, roberta-base. Best score gives roberta, finetuned on small dataset with layer freezing and other specific hacks mentioned in articles: [[1]](#1), [[2]](#2), [[3]](#3)
 
 <!-- 2. NER (detect activity and get it’s normal form) -->
-### For every activity detect emotion (neutral, happy, angry, etc ..)
+#### For every activity detect emotion (neutral, happy, angry, etc ..)
 
 For this task i used model from huggingface - [bertweet-sentiment-analysis](https://huggingface.co/finiteautomata/bertweet-base-sentiment-analysis)
 
-### Anomalies detection and alarms 
+#### Anomalies detection and alarms 
 
 Apear soon
 
-### Numeric metrics prediction 
+#### Numeric metrics prediction 
 
 Apear soon
 
@@ -120,7 +120,7 @@ Apear soon
 3. Rest time control 
 4. Tumblers for recommendations types: (work/rest/creativity)
 
-For this task i used the following architecture: 
+#### Architecture: 
 
 here will be umage soon
 
