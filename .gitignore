@@ -13,4 +13,5 @@
 
 /web_application/django-gradient-able
 
-.ipynb_checkpoints
+*.ipynb_checkpoints*
+*.__pycache__*

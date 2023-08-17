@@ -96,7 +96,7 @@ Model summarize my activities, emotions and etc during week and make report
 
 #### Activiti type recognition
 
-For this task i have tried different models: fasttext+gb, fasttext+BiLSTM, roberta-base. Best score gives roberta, finetuned on small dataset with layer freezing and other specific hacks mentioned in articles: [[1]](#1), [[2]](#2), [[3]](#3)
+I have small dataset with 560 activities to classify. For this task I tried different models: fasttext+gb, fasttext+BiLSTM, roberta-base. Best score gives roberta, finetuned with layer freezing and other specific tricks mentioned in articles: [[1]](#1), [[2]](#2), [[3]](#3)
 
 | Model           | Accuracy(%) | F1   |  
 |----------------|---------------|---------------|
@@ -106,9 +106,9 @@ For this task i have tried different models: fasttext+gb, fasttext+BiLSTM, rober
 | roberta-base with <br> additional train data  | 95  |  | 
 
 <!-- 2. NER (detect activity and get it’s normal form) -->
-#### For every activity detect emotion (neutral, happy, angry, etc ..)
+#### Sentiment detection
 
-For this task i used zero-shot classification model from huggingface - [bertweet-sentiment-analysis](https://huggingface.co/finiteautomata/bertweet-base-sentiment-analysis)
+For this task I used zero-shot classification model bertweet-sentiment-analysis from - [huggingface](https://huggingface.co/finiteautomata/bertweet-base-sentiment-analysis)
 
 
 ## Feature 2: Activities recommendation system 
@@ -117,11 +117,11 @@ My recommendation system consists of two parts: 1 - activity type reccomendation
 
 #### Activity type reccomendations:
 
-For this task I used pretrained fasttext embeddings and LSTM. For each day I aggregate activitiy embeddings using average pooling, then concatenate additional numeric features and pooled embeding - thus I get day representtion embedding and put them in LSTM sequentially according to the date. 
+I used pretrained fasttext and LSTM. For each day I aggregate activitiy embeddings using average pooling, then concatenate additional numeric features and pooled embeding - thus I get day representtion embedding and put them in LSTM sequentially according to the date. 
 
 #### Activities generation:
 
-Now when I get activities types recommendation I train adapters for flan-T5 model to generate activities.
+Now when I get activities types recommendation I train adapters for flan-T5 model [[4]](#4) to generate activities.
 For each activity type a generate 2 activitiy: one based on user pisitive experience, another something new, that user never experienced before.   
 
 **To generate activities according to the user's positive experience** I get 5 activities from past with highest day score and 5 random activities. Then I use promt: 
@@ -155,10 +155,17 @@ and train flan T5 model on GPT-3's responces.
 ![lstm predictions][lstm_predictions]
 
 
-## Feature 3: Activity recognition on images 
+<!-- ## Feature 3: Activity recognition on images 
   
-If I haven't filled out the report, but attached photos, bot automatically analyzes the images and recognizes activities
+If I haven't filled out the report, but attached photos, bot automatically analyzes the images and recognizes activities -->
 
+
+## Project structure
+
+The project has the following structure:
+- `assitant/`: `.py` scripts with data parsing and preprocessing
+- `assitant/models`: `.py` scripts with model training and inference modules
+- `assitant/bot`: `.py` telegram bot scripts 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -250,7 +257,7 @@ Jeremy Howard, Sebastian Ruder.<br>
 
 <a id="4">[4]</a> 
 Scaling Instruction-Finetuned Language Models.
-Google.<br>
+Team from Google.<br>
 [arXiv:2210.11416](https://arxiv.org/abs/2210.11416)
 
 
