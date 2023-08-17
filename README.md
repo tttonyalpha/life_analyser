@@ -103,7 +103,7 @@ For this task i have tried different models: fasttext+gb, fasttext+BiLSTM, rober
 | fasttext+gb | 82  |  | 
 | fasttext+BiLSTM   | 88  |  | 
 | roberta-base   | 92  |  | 
-| roberta-base with additional train data  | 95  |  | 
+| roberta-base with <br> additional train data  | 95  |  | 
 
 <!-- 2. NER (detect activity and get it’s normal form) -->
 #### For every activity detect emotion (neutral, happy, angry, etc ..)
@@ -127,9 +127,9 @@ For each activity type a generate 2 activitiy: one based on user pisitive experi
 **To generate activities according to the user's positive experience** I get 5 activities from past with highest day score and 5 random activities. Then I use promt: 
 
 ```
-For last 10 days user experienced activities connected with #activities_type and gives them scores:
-#activity_1 - #rate_1, ..., #activity_10 - #rate_10 Reccomend new activity for this user: 
-
+For last 10 days user experienced activities connected with #activities_type 
+and gives them scores: #activity_1 - #rate_1, ..., #activity_10 - #rate_10.
+Reccomend new activity for this user: 
 ```
 
 and train flan T5 model on GPT-3's responces.
