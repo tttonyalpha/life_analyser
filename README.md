@@ -98,6 +98,13 @@ Model summarize my activities, emotions and etc during week and make report
 
 For this task i have tried different models: fasttext+gb, fasttext+BiLSTM, roberta-base. Best score gives roberta, finetuned on small dataset with layer freezing and other specific hacks mentioned in articles: [[1]](#1), [[2]](#2), [[3]](#3)
 
+| Model           | Accuracy(%) | F1   |  
+|----------------|---------------|---------------|
+| fasttext+gb | 82  |  | 
+| fasttext+BiLSTM   | 88  |  | 
+| roberta-base   | 92  |  | 
+| roberta-base with additional train data  | 95  |  | 
+
 <!-- 2. NER (detect activity and get it’s normal form) -->
 #### For every activity detect emotion (neutral, happy, angry, etc ..)
 
@@ -119,7 +126,11 @@ For each activity type a generate 2 activitiy: one based on user pisitive experi
 
 **To generate activities according to the user's positive experience** I get 5 activities from past with highest day score and 5 random activities. Then I use promt: 
 
-```For last 10 days user experienced activities connected with #activities_type and gives them scores: #activity_1 - #rate_1, ..., #activity_10 - #rate_10. Reccomend new activity for this user: ```
+```
+For last 10 days user experienced activities connected with #activities_type and gives them scores:
+#activity_1 - #rate_1, ..., #activity_10 - #rate_10 Reccomend new activity for this user: 
+
+```
 
 and train flan T5 model on GPT-3's responces.
 
@@ -204,8 +215,8 @@ See the [open issues](https://github.com/github_username/repo_name/issues) for a
 <!-- CONTACT -->
 ## Contacts
 
-Telegram: [@my_name_is_nikita_hey](https://t.me/my_name_is_nikita_hey)
-Mail: tttonyalpha@gmail.com
+Telegram: [@my_name_is_nikita_hey](https://t.me/my_name_is_nikita_hey) <br>
+Mail: tttonyalpha@gmail.com 
 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
