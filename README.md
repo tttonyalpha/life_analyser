@@ -111,14 +111,31 @@ Apear soon
 
 Apear soon
 
-## Feature 2: Recsys for activity
+## Feature 2: Activities recommendation system 
 
+My recommendation system consists of two parts: 1 - activity type reccomendations 2 - activities generation. First model predict top 3 activity types for next day, then second model generate some activities for each actitity type. 
+
+#### Activity type reccomendations:
+
+For this task I used pretrained fasttext embeddings and LSTM. For each day I aggregate activitiy embeddings using average pooling, then concatenate additional numeric features and pooled embeding - thus I get day representtion embedding and put them in LSTM sequentially according to the date. 
+
+#### Activities generation:
+
+Now when I get activities types recommendation I train adapters for flan-T5 model to generate activities.
+For each activity type a generate 2 activitiy: one based on user pisitive experience, another something new, that user never experienced before.   
+
+To generate activities according to the user's positive experience I get 5 activities from past with highest day score and 5 random activities. Then I use promt: 'For last 10 days user experienced activities connected with #activities_type and gives them scores: #activity_1 - #rate_1, ..., #activity_10 - #rate_10. Reccomend new activity for this user: ' and train flan T5 model on GPT-3's responces.
+
+To generate new activities, that user never experienced before I use the same promt on T5 inference but add blacklist activities for GPT-3 on train. 
+
+
+<!-- 
 #### Based on information from summary:
     
 1. Recommend top 3 activity for next day (from my activity pool)
 2. Recommend Activity types on which i should focus next n-days 
 3. Rest time control 
-4. Tumblers for recommendations types: (work/rest/creativity)
+4. Tumblers for recommendations types: (work/rest/creativity) -->
 
 #### Architecture: 
 
@@ -167,12 +184,32 @@ See the [open issues](https://github.com/github_username/repo_name/issues) for a
 <p align="right">(<a href="#readme-top">back to top</a>)</p> -->
 
 
+
+
+<!-- ROADMAP -->
+## Roadmap
+
+- [x] Telegram channel data fetcher and parser
+- [x] Database mechanics and data markup
+- [x] Activity classifier 
+- [x] Sentiment detector 
+- [x] Day score predictor
+- [x] Activity recommender
+- [x] LLM-based activity generator 
+
+
+- [ ] LLM-based chat bot with intent recognition
+- [ ] LLM-based daily/weekly summaries generator 
+- [ ] Activities detection from images
+- [ ] Anomalies detection
+
+
 <!-- CONTACT -->
-## Contact
+## Contacts
 
-My contacts: telegram: [@my_name_is_nikita_hey](https://t.me/my_name_is_nikita_hey), mail: tttonyalpha@gmail.com
+Telegram: [@my_name_is_nikita_hey](https://t.me/my_name_is_nikita_hey)
+Mail: tttonyalpha@gmail.com
 
-Project Link: [https://github.com/github_username/repo_name](https://github.com/tttonyalpha/life_analyser)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -201,6 +238,13 @@ Alex Tamkin, Trisha Singh, Davide Giovanardi, Noah Goodman.<br>
 Universal Language Model Fine-tuning for Text Classification.
 Jeremy Howard, Sebastian Ruder.<br>
 [arXiv:1801.06146](https://arxiv.org/abs/1801.06146)
+
+
+<a id="4">[4]</a> 
+Scaling Instruction-Finetuned Language Models.
+Google.<br>
+[arXiv:2210.11416](https://arxiv.org/abs/2210.11416)
+
 
 
 
