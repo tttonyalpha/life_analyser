@@ -101,15 +101,8 @@ For this task i have tried different models: fasttext+gb, fasttext+BiLSTM, rober
 <!-- 2. NER (detect activity and get it’s normal form) -->
 #### For every activity detect emotion (neutral, happy, angry, etc ..)
 
-For this task i used model from huggingface - [bertweet-sentiment-analysis](https://huggingface.co/finiteautomata/bertweet-base-sentiment-analysis)
+For this task i used zero-shot classification model from huggingface - [bertweet-sentiment-analysis](https://huggingface.co/finiteautomata/bertweet-base-sentiment-analysis)
 
-#### Anomalies detection and alarms 
-
-Apear soon
-
-#### Numeric metrics prediction 
-
-Apear soon
 
 ## Feature 2: Activities recommendation system 
 
@@ -124,9 +117,13 @@ For this task I used pretrained fasttext embeddings and LSTM. For each day I agg
 Now when I get activities types recommendation I train adapters for flan-T5 model to generate activities.
 For each activity type a generate 2 activitiy: one based on user pisitive experience, another something new, that user never experienced before.   
 
-To generate activities according to the user's positive experience I get 5 activities from past with highest day score and 5 random activities. Then I use promt: 'For last 10 days user experienced activities connected with #activities_type and gives them scores: #activity_1 - #rate_1, ..., #activity_10 - #rate_10. Reccomend new activity for this user: ' and train flan T5 model on GPT-3's responces.
+**To generate activities according to the user's positive experience** I get 5 activities from past with highest day score and 5 random activities. Then I use promt: 
 
-To generate new activities, that user never experienced before I use the same promt on T5 inference but add blacklist activities for GPT-3 on train. 
+```For last 10 days user experienced activities connected with #activities_type and gives them scores: #activity_1 - #rate_1, ..., #activity_10 - #rate_10. Reccomend new activity for this user: ```
+
+and train flan T5 model on GPT-3's responces.
+
+**To generate new activities, that user never experienced before** I use the same promt on T5 inference but add blacklist activities for GPT-3 on train. 
 
 
 <!-- 
