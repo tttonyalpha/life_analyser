@@ -37,7 +37,7 @@
 <h3 align="center">Life analyser</h3>
 
   <p align="center">
-    This is a telegram bot which parses my telegram channel with daily reports. Based on this data, it generates a summary of past reports, predicts various indicators of well-being for the next day and recommends best activities for next day
+    This is a telegram bot that parses my telegram channel with daily reports. Based on this data, it generates a summary of past reports, predicts various indicators of well-being for the next day and recommends the best activities for the next day
     <br />
     <a href="https://github.com/tttonyalpha/life_analyser"><strong>Explore the docs »</strong></a>
     <br />
@@ -86,17 +86,16 @@
 ![My channel screen shot][product-screenshot]
 <!-- (https://drive.google.com/file/d/12k2PHKTiuc_fPejNALLAS7gnQKYj06X2/view?usp=sharing) -->
 
-Every day I make a list of tasks in the telegram channel, and at the end of the day I mark with emoji whether I have completed the tasks or not and evaluate my productivity, the interest of the day and stress level. on a 10-point scale.
+Every day, I make a list of tasks in the Telegram channel. At the end of the day, I mark with an emoji whether I have completed the tasks or not and evaluate my productivity, the interest of the day, and stress level on a 10-point scale.
 
-
-I decided to create a chatbot, a chatbot that parses my telegram channel, my Google calendar, data from my fitness bracelet and, based on the information from there, makes various predictions, gives advice and checks the correctness of filling out reports
+I decided to create a chatbot. This chatbot will parse my Telegram channel, my Google calendar, data from my fitness bracelet, and, based on the information from there, make various predictions, give advice, and check the correctness of filling out reports.
 
 ## Feature 1: N-day summary and autoreports  
-Model summarize my activities, emotions and etc during week and make report 
+The model will summarize my activities, emotions, etc. during the week and generate a report.
 
 #### Activiti type recognition
 
-I have small dataset with 560 activities to classify. For this task I tried different models: fasttext+gb, fasttext+BiLSTM, roberta-base. Best score gives roberta, finetuned with layer freezing and other specific tricks mentioned in articles: [[1]](#1), [[2]](#2), [[3]](#3)
+I have a small dataset with 560 activities to classify. For this task, I tried different models: fasttext+gb, fasttext+BiLSTM, and roberta-base. The best score was achieved with roberta, fine-tuned with layer freezing and other specific tricks mentioned in articles: [[1]](#1), [[2]](#2), [[3]](#3)
 
 | Model           | Accuracy(%) | F1   |  
 |----------------|---------------|---------------|
@@ -113,17 +112,17 @@ For this task I used zero-shot classification model bertweet-sentiment-analysis 
 
 ## Feature 2: Activities recommendation system 
 
-My recommendation system consists of two parts: 1 - activity type reccomendations 2 - activities generation. First model predict top 3 activity types for next day, then second model generate some activities for each actitity type. 
-
+My recommendation system consists of two parts: 1 - activity type recommendations 2 - activities generation. First, the model predicts the top 3 activity types for the next day, then the second model generates some activities for each activity type
 #### Activity type reccomendations:
 
-I used pretrained fasttext and LSTM. For each day I aggregate activitiy embeddings using average pooling, then concatenate additional numeric features and pooled embeding - thus I get day representtion embedding and put them in LSTM sequentially according to the date. 
+I used pretrained fasttext and LSTM. For each day, I aggregate activity embeddings using average pooling, then concatenate additional numeric features and pooled embedding. Thus, I get a day representation embedding and put them in LSTM sequentially according to the date
 
 #### Activities generation:
 
-Now when I get activities types recommendation I train adapters for flan-T5 model [[4]](#4) to generate activities.
-For each activity type a generate 2 activitiy: one based on user pisitive experience, another something new, that user never experienced before.   
+Now when I get activity types recommendation, I train adapters for flan-T5 model [[4]](#4)  to generate activities.
+For each activity type, I generate 2 activities: one based on the user's positive experience, and another something new that the user has never experienced before.
 
+<!-- 
 **To generate activities according to the user's positive experience** I get 5 activities from past with highest day score and 5 random activities. Then I use promt: 
 
 ```
@@ -136,7 +135,7 @@ and train flan T5 model on GPT-3's responces.
 
 **To generate new activities, that user never experienced before** I use the same promt on T5 inference but add blacklist activities for GPT-3 on train. 
 
-
+ -->
 <!-- 
 #### Based on information from summary:
     
